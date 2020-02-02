@@ -7,6 +7,9 @@
         <b>Quantity: {{ product.quantity }}</b>
       </p>
 
+      <button @click="addQuantity(product.id)">+</button>
+      <button>-</button>
+
       <br />
     </div>
 
@@ -15,6 +18,7 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 export default {
   props: {
     addedProducts: {
@@ -25,6 +29,13 @@ export default {
       type: Number,
       required: true
     }
+  },
+  methods: {
+    addQuantity(id) {
+      //   console.log('add product of this id??', id)
+      this.addQuantity(id)
+    },
+    ...mapActions(['addQuantity'])
   }
 }
 </script>

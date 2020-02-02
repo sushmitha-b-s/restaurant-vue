@@ -1,5 +1,10 @@
 <template>
   <div>
+    <nav>
+      <ul>
+        <li><router-link :to="{ name: 'categories' }">Menu</router-link></li>
+      </ul>
+    </nav>
     <CartList :addedProducts="addedProducts" :totalPrice="totalPrice" />
   </div>
 </template>
