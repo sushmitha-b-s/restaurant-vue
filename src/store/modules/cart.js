@@ -21,12 +21,21 @@ export const mutations = {
       state.addedProducts = [...state.addedProducts, addedProduct]
       state.total = state.total + addedProduct.productPrice
     }
+  },
+  ADD_QUANTITY(state, id) {
+    let addedItem = state.addedProducts.find(product => product.id === id)
+
+    addedItem.quantity += 1
+    state.total = state.total + addedItem.productPrice
   }
 }
 
 export const actions = {
   addToCart({ commit }, product) {
     commit('ADD_TO_CART', product)
+  },
+  addQuantity({ commit }, id) {
+    commit('ADD_QUANTITY', id)
   }
 }
 
