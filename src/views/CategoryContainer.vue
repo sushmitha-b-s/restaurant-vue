@@ -1,5 +1,13 @@
 <template>
   <div>
+    <nav>
+      <ul>
+        <li><router-link :to="{ name: 'categories' }">Menu</router-link></li>
+        <li>
+          <router-link :to="{ name: 'my-orders' }">My Orders</router-link>
+        </li>
+      </ul>
+    </nav>
     <h1>menu List</h1>
 
     <CategoryList

@@ -12,5 +12,8 @@ const apiClient = axios.create({
 export default {
   loadCategories() {
     return apiClient.get('/categories')
+  },
+  loadProducts(id) {
+    return apiClient.get(`/categories/${id}/products`)
   }
 }
