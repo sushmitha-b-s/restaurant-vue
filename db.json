@@ -1,0 +1,116 @@
+{
+  "categories": [
+    {
+      "id": 1,
+      "name": "Pizzas"
+    },
+    {
+      "id": 2,
+      "name": "Cocktails"
+    },
+    {
+      "id": 3,
+      "name": "IceCreams"
+    },
+    {
+      "id": 4,
+      "name": "Burgers"
+    },
+    {
+      "id": 5,
+      "name": "Desserts"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "productName": "Veg Pizza",
+      "productPrice": 7,
+      "categoryId": 1
+    },
+    {
+      "id": 2,
+      "productName": "Chicken Pizza",
+      "productPrice": 10,
+      "categoryId": 1
+    },
+    {
+      "id": 3,
+      "productName": "Mushroom Pizza",
+      "productPrice": 8,
+      "categoryId": 1
+    },
+    {
+      "id": 4,
+      "productName": "Bloody Mary",
+      "productPrice": 6,
+      "categoryId": 2
+    },
+    {
+      "id": 5,
+      "productName": "Mojito",
+      "productPrice": 5,
+      "categoryId": 2
+    },
+    {
+      "id": 6,
+      "productName": "Cosmopolitan",
+      "productPrice": 8,
+      "categoryId": 2
+    },
+    {
+      "id": 7,
+      "productName": "Chocolate Fudge",
+      "productPrice": 8,
+      "categoryId": 3
+    },
+    {
+      "id": 8,
+      "productName": "Death By Chocolate",
+      "productPrice": 12,
+      "categoryId": 3
+    },
+    {
+      "id": 9,
+      "productName": "Caramel Fudge",
+      "productPrice": 9,
+      "categoryId": 3
+    },
+    {
+      "id": 10,
+      "productName": "Veg Burger",
+      "productPrice": 8,
+      "categoryId": 4
+    },
+    {
+      "id": 11,
+      "productName": "Chicken Burger",
+      "productPrice": 10,
+      "categoryId": 4
+    },
+    {
+      "id": 12,
+      "productName": "Crispy Burger",
+      "productPrice": 9,
+      "categoryId": 4
+    },
+    {
+      "id": 13,
+      "productName": "Cookies",
+      "productPrice": 3,
+      "categoryId": 5
+    },
+    {
+      "id": 14,
+      "productName": "Frozen pudding",
+      "productPrice": 3,
+      "categoryId": 5
+    },
+    {
+      "id": 15,
+      "productName": "Chocolate Pastry",
+      "productPrice": 4,
+      "categoryId": 5
+    }
+  ]
+}
