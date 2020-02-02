@@ -35,6 +35,7 @@ export const mutations = {
       state.addedProducts = state.addedProducts.filter(
         product => product.id !== subtractedItem.id
       )
+      state.total = state.total - subtractedItem.productPrice
     } else {
       subtractedItem.quantity -= 1
       state.total = state.total - subtractedItem.productPrice

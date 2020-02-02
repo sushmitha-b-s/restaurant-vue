@@ -13,7 +13,18 @@
       <br />
     </div>
 
-    <h2>Total Price: {{ totalPrice }}€</h2>
+    <div v-if="totalPrice != 0">
+      <h2>Total Price: {{ totalPrice }}€</h2>
+
+      <button
+        :disabled="totalPrice < 10"
+        :class="{ disableCheckout: totalPrice < 10 }"
+      >
+        Checkout
+      </button>
+      <p v-if="totalPrice < 10">{{ message }}</p>
+    </div>
+    <div v-else>Your cart is empty. Please go to MENU to order.</div>
   </div>
 </template>
 
@@ -30,10 +41,19 @@ export default {
       required: true
     }
   },
+  data() {
+    return {
+      message: 'Please add minimun of 10€ to checkout'
+    }
+  },
   methods: {
     ...mapActions(['addQuantity', 'subtractQuantity'])
   }
 }
 </script>
 
-<style></style>
+<style scoped>
+.disableCheckout {
+  background-color: #d8d8d8;
+}
+</style>
