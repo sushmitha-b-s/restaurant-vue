@@ -6,12 +6,13 @@
         <b>Price: {{ product.productPrice }}€</b>
       </p>
 
-      <button @click="addToCart(product)">Add to cart</button>
+      <button @click="addProduct(product)">Add to cart</button>
     </div>
   </div>
 </template>
 
 <script>
+import { mapState, mapActions } from 'vuex'
 export default {
   props: {
     products: {
@@ -20,9 +21,16 @@ export default {
     }
   },
   methods: {
-    addToCart(product) {
-      console.log('added to cart', product)
+    ...mapActions(['addToCart']),
+    addProduct(product) {
+      //   console.log('added to cart', product)
+      this.addToCart(product)
     }
+  },
+  computed: {
+    ...mapState({
+      cart: state => state.cart
+    })
   }
 }
 </script>
