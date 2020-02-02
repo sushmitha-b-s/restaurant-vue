@@ -16,12 +16,14 @@
     <div v-if="totalPrice != 0">
       <h2>Total Price: {{ totalPrice }}€</h2>
 
-      <button
-        :disabled="totalPrice < 10"
-        :class="{ disableCheckout: totalPrice < 10 }"
-      >
-        Checkout
-      </button>
+      <router-link :to="{ name: 'checkout' }">
+        <button
+          :disabled="totalPrice < 10"
+          :class="{ disableCheckout: totalPrice < 10 }"
+        >
+          Checkout
+        </button>
+      </router-link>
       <p v-if="totalPrice < 10">{{ message }}</p>
     </div>
     <div v-else>Your cart is empty. Please go to MENU to order.</div>
