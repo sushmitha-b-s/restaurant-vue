@@ -27,6 +27,18 @@ export const mutations = {
 
     addedItem.quantity += 1
     state.total = state.total + addedItem.productPrice
+  },
+  SUBTRACT_QUANTITY(state, id) {
+    let subtractedItem = state.addedProducts.find(product => product.id === id)
+
+    if (subtractedItem.quantity === 1) {
+      state.addedProducts = state.addedProducts.filter(
+        product => product.id !== subtractedItem.id
+      )
+    } else {
+      subtractedItem.quantity -= 1
+      state.total = state.total - subtractedItem.productPrice
+    }
   }
 }
 
@@ -36,6 +48,9 @@ export const actions = {
   },
   addQuantity({ commit }, id) {
     commit('ADD_QUANTITY', id)
+  },
+  subtractQuantity({ commit }, id) {
+    commit('SUBTRACT_QUANTITY', id)
   }
 }
 

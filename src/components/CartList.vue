@@ -8,7 +8,7 @@
       </p>
 
       <button @click="addQuantity(product.id)">+</button>
-      <button>-</button>
+      <button @click="subtractQuantity(product.id)">-</button>
 
       <br />
     </div>
@@ -31,11 +31,7 @@ export default {
     }
   },
   methods: {
-    addQuantity(id) {
-      //   console.log('add product of this id??', id)
-      this.addQuantity(id)
-    },
-    ...mapActions(['addQuantity'])
+    ...mapActions(['addQuantity', 'subtractQuantity'])
   }
 }
 </script>
