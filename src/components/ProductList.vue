@@ -12,7 +12,7 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapActions } from 'vuex'
 export default {
   props: {
     products: {
@@ -26,12 +26,12 @@ export default {
       //   console.log('added to cart', product)
       this.addToCart(product)
     }
-  },
-  computed: {
-    ...mapState({
-      cart: state => state.cart
-    })
   }
+  //   computed: {
+  //     ...mapState({
+  //       cart: state => state.cart
+  //     })
+  //   }
 }
 </script>
 
