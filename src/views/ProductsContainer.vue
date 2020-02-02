@@ -4,7 +4,9 @@
       <ul>
         <li><router-link :to="{ name: 'categories' }">Menu</router-link></li>
         <li>
-          <router-link :to="{ name: 'cart' }">My Cart</router-link>
+          <router-link :to="{ name: 'my-cart' }"
+            >My Cart ({{ cartLength }})</router-link
+          >
         </li>
       </ul>
     </nav>
@@ -14,7 +16,7 @@
 </template>
 
 <script>
-import { mapState, mapActions } from 'vuex'
+import { mapState, mapActions, mapGetters } from 'vuex'
 import ProductList from '../components/ProductList'
 export default {
   components: {
@@ -29,7 +31,8 @@ export default {
   computed: {
     ...mapState({
       products: state => state.product.products
-    })
+    }),
+    ...mapGetters(['cartLength'])
   }
 }
 </script>
