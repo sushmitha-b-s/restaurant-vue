@@ -40,6 +40,10 @@ export const mutations = {
       subtractedItem.quantity -= 1
       state.total = state.total - subtractedItem.productPrice
     }
+  },
+  ORDER_PRODUCTS(state) {
+    state.addedProducts = []
+    state.total = 0
   }
 }
 
