@@ -11,7 +11,7 @@
     <h2>You have ordered</h2>
 
     <div v-if="totalOrders.length !== 0">
-      <div v-for="order in totalOrders" :key="order.id">
+      <div v-for="order in totalOrders" :key="order.orderId">
         <p><span>Order Id: </span>{{ order.orderId }}</p>
         <p><span>Email: </span>{{ order.personInfo.email }}</p>
         <p>
@@ -24,6 +24,7 @@
           <p><span>Quantity: </span>{{ product.quantity }}</p>
         </div>
 
+        <button @click="deleteOrder(order.orderId)">Delete order</button>
         <br />
       </div>
     </div>
@@ -32,12 +33,16 @@
 </template>
 
 <script>
+import { mapActions } from 'vuex'
 export default {
   props: {
     totalOrders: {
       type: Array,
       required: true
     }
+  },
+  methods: {
+    ...mapActions(['deleteOrder'])
   }
 }
 </script>
