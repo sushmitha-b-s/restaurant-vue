@@ -1,51 +1,23 @@
 <template>
   <div>
-    <form @submit.prevent="onSubmit">
-      <p>
-        <label for="email">Email:</label>
-        <input
-          id="email"
-          v-model="email"
-          type="email"
-          placeholder="Email Address"
-        />
-      </p>
-
-      <p>
-        <label for="address">Address:</label>
-        <textarea
-          id="address"
-          v-model="address"
-          placeholder="Delivery Address"
-        />
-      </p>
-
-      <button type="submit">Submit</button>
-    </form>
+    <UserDetail @form-submitted="onSubmit" />
   </div>
 </template>
 
 <script>
 import { mapState, mapActions } from 'vuex'
+import UserDetail from './UserDetail'
 export default {
-  data() {
-    return {
-      email: '',
-      address: ''
-    }
+  components: {
+    UserDetail
   },
   methods: {
-    onSubmit() {
-      console.log('submitted')
+    onSubmit(personInfo) {
       this.orderProducts({
         orderedProducts: this.orderedProducts,
         totalPrice: this.totalPrice,
-        email: this.email,
-        deliveryAddress: this.address
+        personInfo
       })
-
-      this.email = ''
-      this.address = ''
     },
     ...mapActions(['orderProducts'])
   },
