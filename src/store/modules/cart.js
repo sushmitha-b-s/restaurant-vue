@@ -7,9 +7,7 @@ export const mutations = {
   ADD_TO_CART(state, product) {
     let addedProduct = product
 
-    let existedProduct = state.addedProducts.find(
-      product => product.id === addedProduct.id
-    )
+    let existedProduct = state.addedProducts.find(p => p.id === addedProduct.id)
 
     if (existedProduct) {
       addedProduct.quantity += 1

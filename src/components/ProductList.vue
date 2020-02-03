@@ -6,7 +6,7 @@
         <b>Price: {{ product.productPrice }}€</b>
       </p>
 
-      <button @click="addProduct(product)">Add to cart</button>
+      <button @click="addToCart(product)">Add to cart</button>
     </div>
   </div>
 </template>
@@ -21,17 +21,8 @@ export default {
     }
   },
   methods: {
-    ...mapActions(['addToCart']),
-    addProduct(product) {
-      //   console.log('added to cart', product)
-      this.addToCart(product)
-    }
+    ...mapActions(['addToCart'])
   }
-  //   computed: {
-  //     ...mapState({
-  //       cart: state => state.cart
-  //     })
-  //   }
 }
 </script>
 
