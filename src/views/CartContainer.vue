@@ -11,16 +11,10 @@
 
 <script>
 import CartList from '../components/CartList'
-import { mapState, mapActions } from 'vuex'
+import { mapState } from 'vuex'
 export default {
   components: {
     CartList
-  },
-  methods: {
-    ...mapActions(['addToCart'])
-  },
-  created() {
-    this.addToCart()
   },
   computed: {
     ...mapState({
