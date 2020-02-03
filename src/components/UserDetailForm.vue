@@ -17,6 +17,10 @@ export default {
         orderedProducts: this.orderedProducts,
         totalPrice: this.totalPrice,
         personInfo
+      }).then(() => {
+        this.$router.push({
+          name: 'my-orders'
+        })
       })
     },
     ...mapActions(['orderProducts'])
