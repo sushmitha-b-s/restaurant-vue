@@ -2,23 +2,39 @@
   "categories": [
     {
       "id": 1,
-      "name": "Pizzas"
+      "name": "Pizzas",
+      "supplier": "Domino's",
+      "Timings": "10:00 to 18:00"
     },
     {
       "id": 2,
-      "name": "Cocktails"
+      "name": "Cocktails",
+      "supplier": "Volkshotel",
+      "Timings": "12:00 to 22:00"
     },
     {
       "id": 3,
-      "name": "IceCreams"
+      "name": "IceCreams",
+      "supplier": "Zarzo Icecreams",
+      "Timings": "10:00 to 20:00"
     },
     {
       "id": 4,
-      "name": "Burgers"
+      "name": "Burgers",
+      "supplier": "De Burger",
+      "Timings": "10:00 to 20:00"
     },
     {
       "id": 5,
-      "name": "Desserts"
+      "name": "Desserts",
+      "supplier": "Giornale Desserts",
+      "Timings": "10:00 to 22:00"
+    },
+    {
+      "id": 6,
+      "name": "Cake Shop",
+      "supplier": "Cake and Dolci",
+      "Timings": "10:00 to 18:00"
     }
   ],
   "products": [
@@ -26,91 +42,127 @@
       "id": 1,
       "productName": "Veg Pizza",
       "productPrice": 7,
+      "Ingredients": "Tomato sauce, double mozzerella and oregano",
       "categoryId": 1
     },
     {
       "id": 2,
       "productName": "Chicken Pizza",
       "productPrice": 10,
+      "Ingredients": "Tomato sauce, double mozzerella, grilled checken, pepperoni and bacon",
       "categoryId": 1
     },
     {
       "id": 3,
       "productName": "Mushroom Pizza",
       "productPrice": 8,
+      "Ingredients": "Tomato sauce, double mozzerella and mushrooms",
       "categoryId": 1
     },
     {
       "id": 4,
       "productName": "Bloody Mary",
       "productPrice": 6,
+      "Ingredients": "It's just a Bloody mary",
       "categoryId": 2
     },
     {
       "id": 5,
       "productName": "Mojito",
       "productPrice": 5,
+      "Ingredients": "It's just a mojito",
       "categoryId": 2
     },
     {
       "id": 6,
       "productName": "Cosmopolitan",
       "productPrice": 8,
+      "Ingredients": "It's just a cosmopolitan",
       "categoryId": 2
     },
     {
       "id": 7,
       "productName": "Chocolate Fudge",
       "productPrice": 8,
+      "Ingredients": "2 Chocolate scoops, chocolate sauce with peanuts sprinkled",
       "categoryId": 3
     },
     {
       "id": 8,
       "productName": "Death By Chocolate",
       "productPrice": 12,
+      "Ingredients": "3 vanilla scoops, chocolate sauce, brownies with peanut sprinkled and cherries",
       "categoryId": 3
     },
     {
       "id": 9,
       "productName": "Caramel Fudge",
       "productPrice": 9,
+      "Ingredients": "Hot caramel with vanilla scoops",
       "categoryId": 3
     },
     {
       "id": 10,
       "productName": "Veg Burger",
       "productPrice": 8,
+      "Ingredients": "Burger with veggies",
       "categoryId": 4
     },
     {
       "id": 11,
       "productName": "Chicken Burger",
       "productPrice": 10,
+      "Ingredients": "Burger with chicken",
       "categoryId": 4
     },
     {
       "id": 12,
       "productName": "Crispy Burger",
       "productPrice": 9,
+      "Ingredients": "Burger with crispiness",
       "categoryId": 4
     },
     {
       "id": 13,
       "productName": "Cookies",
       "productPrice": 3,
+      "Ingredients": "just a cookies",
       "categoryId": 5
     },
     {
       "id": 14,
       "productName": "Frozen pudding",
       "productPrice": 3,
+      "Ingredients": "Different flavours",
       "categoryId": 5
     },
     {
       "id": 15,
       "productName": "Chocolate Pastry",
       "productPrice": 4,
+      "Ingredients": "An chocolate iced cake",
       "categoryId": 5
+    },
+    {
+      "id": 16,
+      "productName": "Apple cinnamon cake",
+      "productPrice": 19.57,
+      "Ingredients": "Prepared with Dutch apples",
+      "categoryId": 6
+    },
+    {
+      "id": 17,
+      "productName": "Chocolate mousse cake",
+      "productPrice": 29.38,
+      "Ingredients": "Delicious chocolate cake layers",
+      "categoryId": 6
+    },
+    {
+      "id": 18,
+      "productName": "Carrot cake",
+      "productPrice": 62.65,
+      "Ingredients": "Prepared with carrots",
+      "categoryId": 6
     }
   ]
 }
