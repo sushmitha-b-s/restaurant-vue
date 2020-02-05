@@ -1,4 +1,5 @@
-import RestaurantService from '@/services/RestaurantService'
+import { categoryLists } from '../../graphql/index'
+import { apolloClient } from '../../apollo'
 
 export const state = {
   products: []
@@ -11,10 +12,14 @@ export const mutations = {
 }
 
 export const actions = {
-  loadProducts({ commit }, id) {
-    RestaurantService.loadProducts(id).then(res => {
-      //   console.log('res?', res)
-      commit('FETCH_PRODUCTS', res.data)
+  async loadProducts({ commit }, id) {
+    const response = await apolloClient.query({
+      query: categoryLists.products,
+      variables: {
+        category_id: id
+      }
     })
+
+    commit('FETCH_PRODUCTS', response.data.Category.Products)
   }
 }

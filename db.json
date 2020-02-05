@@ -2,23 +2,39 @@
   "categories": [
     {
       "id": 1,
-      "name": "Pizzas"
+      "name": "Pizzas",
+      "supplier": "Domino's",
+      "Timings": "10:00 to 18:00"
     },
     {
       "id": 2,
-      "name": "Cocktails"
+      "name": "Cocktails",
+      "supplier": "Volkshotel",
+      "Timings": "12:00 to 22:00"
     },
     {
       "id": 3,
-      "name": "IceCreams"
+      "name": "IceCreams",
+      "supplier": "Zarzo Icecreams",
+      "Timings": "10:00 to 20:00"
     },
     {
       "id": 4,
-      "name": "Burgers"
+      "name": "Burgers",
+      "supplier": "De Burger",
+      "Timings": "10:00 to 20:00"
     },
     {
       "id": 5,
-      "name": "Desserts"
+      "name": "Desserts",
+      "supplier": "Giornale Desserts",
+      "Timings": "10:00 to 22:00"
+    },
+    {
+      "id": 6,
+      "name": "Cake Shop",
+      "supplier": "Cake and Dolci",
+      "Timings": "10:00 to 18:00"
     }
   ],
   "products": [
@@ -26,91 +42,127 @@
       "id": 1,
       "productName": "Veg Pizza",
       "productPrice": 7,
-      "categoryId": 1
+      "Ingredients": "Tomato sauce, double mozzerella and oregano",
+      "category_id": 1
     },
     {
       "id": 2,
       "productName": "Chicken Pizza",
       "productPrice": 10,
-      "categoryId": 1
+      "Ingredients": "Tomato sauce, double mozzerella, grilled checken, pepperoni and bacon",
+      "category_id": 1
     },
     {
       "id": 3,
       "productName": "Mushroom Pizza",
       "productPrice": 8,
-      "categoryId": 1
+      "Ingredients": "Tomato sauce, double mozzerella and mushrooms",
+      "category_id": 1
     },
     {
       "id": 4,
       "productName": "Bloody Mary",
       "productPrice": 6,
-      "categoryId": 2
+      "Ingredients": "It's just a Bloody mary",
+      "category_id": 2
     },
     {
       "id": 5,
       "productName": "Mojito",
       "productPrice": 5,
-      "categoryId": 2
+      "Ingredients": "It's just a mojito",
+      "category_id": 2
     },
     {
       "id": 6,
       "productName": "Cosmopolitan",
       "productPrice": 8,
-      "categoryId": 2
+      "Ingredients": "It's just a cosmopolitan",
+      "category_id": 2
     },
     {
       "id": 7,
       "productName": "Chocolate Fudge",
       "productPrice": 8,
-      "categoryId": 3
+      "Ingredients": "2 Chocolate scoops, chocolate sauce with peanuts sprinkled",
+      "category_id": 3
     },
     {
       "id": 8,
       "productName": "Death By Chocolate",
       "productPrice": 12,
-      "categoryId": 3
+      "Ingredients": "3 vanilla scoops, chocolate sauce, brownies with peanut sprinkled and cherries",
+      "category_id": 3
     },
     {
       "id": 9,
       "productName": "Caramel Fudge",
       "productPrice": 9,
-      "categoryId": 3
+      "Ingredients": "Hot caramel with vanilla scoops",
+      "category_id": 3
     },
     {
       "id": 10,
       "productName": "Veg Burger",
       "productPrice": 8,
-      "categoryId": 4
+      "Ingredients": "Burger with veggies",
+      "category_id": 4
     },
     {
       "id": 11,
       "productName": "Chicken Burger",
       "productPrice": 10,
-      "categoryId": 4
+      "Ingredients": "Burger with chicken",
+      "category_id": 4
     },
     {
       "id": 12,
       "productName": "Crispy Burger",
       "productPrice": 9,
-      "categoryId": 4
+      "Ingredients": "Burger with crispiness",
+      "category_id": 4
     },
     {
       "id": 13,
       "productName": "Cookies",
       "productPrice": 3,
-      "categoryId": 5
+      "Ingredients": "just a cookies",
+      "category_id": 5
     },
     {
       "id": 14,
       "productName": "Frozen pudding",
       "productPrice": 3,
-      "categoryId": 5
+      "Ingredients": "Different flavours",
+      "category_id": 5
     },
     {
       "id": 15,
       "productName": "Chocolate Pastry",
       "productPrice": 4,
-      "categoryId": 5
+      "Ingredients": "An chocolate iced cake",
+      "category_id": 5
+    },
+    {
+      "id": 16,
+      "productName": "Apple cinnamon cake",
+      "productPrice": 19.57,
+      "Ingredients": "Prepared with Dutch apples",
+      "category_id": 6
+    },
+    {
+      "id": 17,
+      "productName": "Chocolate mousse cake",
+      "productPrice": 29.38,
+      "Ingredients": "Delicious chocolate cake layers",
+      "category_id": 6
+    },
+    {
+      "id": 18,
+      "productName": "Carrot cake",
+      "productPrice": 62.65,
+      "Ingredients": "Prepared with carrots",
+      "category_id": 6
     }
   ]
 }
