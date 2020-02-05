@@ -10,11 +10,7 @@
     </nav>
     <h1>Menus</h1>
 
-    <CategoryList
-      v-for="category in categories"
-      :key="category.id"
-      :category="category"
-    />
+    <CategoryList :categories="categories" />
   </div>
 </template>
 
