@@ -8,7 +8,7 @@
         </li>
       </ul>
     </nav>
-    <h1>menu List</h1>
+    <h1>Menus</h1>
 
     <CategoryList
       v-for="category in categories"
@@ -21,6 +21,7 @@
 <script>
 import { mapState, mapActions } from 'vuex'
 import CategoryList from '@/components/CategoryList'
+
 export default {
   components: {
     CategoryList
