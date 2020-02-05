@@ -1,4 +1,4 @@
-import { categoryLists } from '../../graphql/index'
+import { graphqlQueries } from '../../graphql/index'
 import { apolloClient } from '../../apollo'
 
 export const state = {
@@ -14,7 +14,7 @@ export const mutations = {
 export const actions = {
   async loadProducts({ commit }, id) {
     const response = await apolloClient.query({
-      query: categoryLists.products,
+      query: graphqlQueries.products,
       variables: {
         category_id: id
       }
