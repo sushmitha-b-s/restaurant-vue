@@ -5,9 +5,10 @@
       <p>{{ item.productName }}</p>
       <p>Price: {{ item.productPrice }}€</p>
       <p>Quantity: {{ item.quantity }}</p>
+      <br />
     </div>
 
-    <h3>Total Price: {{ totalPrice }}€</h3>
+    <h3>Total Price: {{ parseFloat(totalPrice).toFixed(2) }}€</h3>
   </div>
 </template>
 

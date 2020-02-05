@@ -18,10 +18,12 @@
           <span>Delivery Address: </span>{{ order.personInfo.deliveryAddress }}
         </p>
 
+        <br />
         <div v-for="product in order.orderedProducts" :key="product.id">
           <p><span>Product: </span>{{ product.productName }}</p>
           <p><span>Price: </span>{{ product.productPrice }}</p>
           <p><span>Quantity: </span>{{ product.quantity }}</p>
+          <br />
         </div>
 
         <button @click="deleteOrder(order.orderId)">Delete order</button>

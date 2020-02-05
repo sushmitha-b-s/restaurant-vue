@@ -14,7 +14,7 @@
     </div>
 
     <div v-if="totalPrice != 0">
-      <h2>Total Price: {{ totalPrice }}€</h2>
+      <h2>Total Price: {{ parseFloat(totalPrice).toFixed(2) }}€</h2>
 
       <router-link :to="{ name: 'checkout' }">
         <button
