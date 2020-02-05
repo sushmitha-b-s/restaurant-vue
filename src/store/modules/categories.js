@@ -15,7 +15,7 @@ export const mutations = {
 export const actions = {
   async loadCategories({ commit }) {
     const response = await apolloClient.query({
-      query: categoryLists.get
+      query: categoryLists.categories
     })
 
     commit('FETCH_CATEGORIES', response.data.allCategories)

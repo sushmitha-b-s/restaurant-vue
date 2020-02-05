@@ -1,5 +1,7 @@
 import categories from './queries/categories.gql'
+import products from './queries/products.gql'
 
 export const categoryLists = {
-  get: categories
+  categories: categories,
+  products: products
 }
