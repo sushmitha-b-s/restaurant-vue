@@ -1,7 +1,7 @@
 <template>
-  <div>
-    <h2>Your checkedout Items:</h2>
-    <div v-for="item in checkedoutItems" :key="item.id">
+  <div class="checkout-container">
+    <h2>Your checked out Items:</h2>
+    <div v-for="item in checkedoutItems" :key="item.id" class="checkout">
       <p>{{ item.productName }}</p>
       <p>Price: {{ item.productPrice }}€</p>
       <p>Quantity: {{ item.quantity }}</p>
