@@ -2,7 +2,15 @@
   <div>
     <nav>
       <ul>
-        <li><router-link :to="{ name: 'categories' }">Menu</router-link></li>
+        <li>
+          <router-link :to="{ name: 'categories' }" class="li-link"
+            >Menu</router-link
+          >
+
+          <router-link :to="{ name: 'categories' }" class="li-link"
+            >Menu</router-link
+          >
+        </li>
       </ul>
     </nav>
     <CartList :addedProducts="addedProducts" :totalPrice="totalPrice" />

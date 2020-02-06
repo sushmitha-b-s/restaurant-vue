@@ -8,17 +8,23 @@
 
       <button @click="addToCart(product)">Add to cart</button>
     </div>
+
+    <CreateProduct />
   </div>
 </template>
 
 <script>
 import { mapActions } from 'vuex'
+import CreateProduct from './CreateProduct'
 export default {
   props: {
     products: {
       type: Array,
       required: true
     }
+  },
+  components: {
+    CreateProduct
   },
   methods: {
     ...mapActions(['addToCart'])

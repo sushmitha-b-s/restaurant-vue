@@ -1,0 +1,13 @@
+mutation(
+    $id: ID!
+    $name: String!
+    $supplier: String!
+    $Timings: String!
+) {
+  createCategory(id: $id, name: $name, supplier: $supplier, Timings: $Timings){
+    id
+    name
+    supplier
+    Timings
+  }
+}

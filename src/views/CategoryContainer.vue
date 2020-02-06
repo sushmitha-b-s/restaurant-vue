@@ -2,19 +2,21 @@
   <div>
     <nav>
       <ul>
-        <li><router-link :to="{ name: 'categories' }">Menu</router-link></li>
         <li>
-          <router-link :to="{ name: 'my-orders' }">My Orders</router-link>
+          <router-link :to="{ name: 'categories' }" class="li-link"
+            >Menu</router-link
+          >
+        </li>
+        <li>
+          <router-link :to="{ name: 'my-orders' }" class="li-link"
+            >My Orders</router-link
+          >
         </li>
       </ul>
     </nav>
-    <h1>Menus</h1>
+    <h1>Menu List</h1>
 
-    <CategoryList
-      v-for="category in categories"
-      :key="category.id"
-      :category="category"
-    />
+    <CategoryList :categories="categories" />
   </div>
 </template>
 
