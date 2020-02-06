@@ -3,7 +3,9 @@
     <nav>
       <ul>
         <li>
-          <router-link :to="{ name: 'categories' }">Order more</router-link>
+          <router-link :to="{ name: 'categories' }" class="li-link"
+            >Order more</router-link
+          >
         </li>
       </ul>
     </nav>

@@ -1,21 +1,21 @@
 <template>
   <div class="createMenu">
-    <h2>Create Menu</h2>
-    <form @submit.prevent="createCategory">
+    <button @click="showMenuForm = true">Create Menu</button>
+
+    <form @submit.prevent="createCategory" v-if="showMenuForm">
       <p>
-        <label for="id">Id:</label>
-        <input id="id" v-model="menu.id" type="number" placeholder="EnterId" />
+        <label>Id:</label>
+        <input v-model="menu.id" type="number" placeholder="EnterId" />
       </p>
 
       <p>
-        <label for="name">Name: </label>
-        <input id="name" type="text" v-model="menu.name" placeholder="name" />
+        <label>Name: </label>
+        <input type="text" v-model="menu.name" placeholder="name" />
       </p>
 
       <p>
-        <label for="supplier">Supplier: </label>
+        <label>Supplier: </label>
         <input
-          id="supplier"
           type="text"
           v-model="menu.supplier"
           placeholder=" Who is the supplier?"
@@ -46,7 +46,8 @@ export default {
     }
     return {
       menu: this.createMenu(),
-      times
+      times,
+      showMenuForm: false
     }
   },
   methods: {
@@ -60,7 +61,10 @@ export default {
       }
     },
     createCategory() {
-      this.addCategory(this.menu)
+      this.addCategory(this.menu).then(() => {
+        this.menu = this.createMenu()
+        this.showMenuForm = false
+      })
     }
   }
 }

@@ -4,25 +4,35 @@
   </div>
 </template>
 
-<style>
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+<style lang="scss">
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Ubuntu', sans-serif;
   text-align: center;
-  color: #2c3e50;
 }
 
-#nav {
-  padding: 30px;
-}
-
-#nav a {
-  font-weight: bold;
-  color: #2c3e50;
-}
-
-#nav a.router-link-exact-active {
-  color: #42b983;
+nav {
+  background-color: rgb(180, 176, 176);
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1.8rem;
+    li {
+      font-size: 1.3rem;
+      margin: 1rem;
+      display: inline;
+      text-decoration: none;
+    }
+    .li-link {
+      text-decoration: none;
+      font-size: 1.5rem;
+      color: #000;
+      text-transform: uppercase;
+    }
+  }
 }
 </style>

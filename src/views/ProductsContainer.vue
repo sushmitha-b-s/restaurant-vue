@@ -2,9 +2,13 @@
   <div>
     <nav>
       <ul>
-        <li><router-link :to="{ name: 'categories' }">Menu</router-link></li>
         <li>
-          <router-link :to="{ name: 'my-cart' }"
+          <router-link :to="{ name: 'categories' }" class="li-link"
+            >Menu</router-link
+          >
+        </li>
+        <li>
+          <router-link :to="{ name: 'my-cart' }" class="li-link"
             >My Cart ({{ cartLength }})</router-link
           >
         </li>
