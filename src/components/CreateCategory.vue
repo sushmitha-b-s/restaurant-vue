@@ -70,7 +70,25 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+button {
+  margin-top: 1rem;
+  padding: 0.75rem 0.7rem;
+  font-size: 1.15rem;
+  background: #6f4e37;
+  color: #fff;
+  border-radius: 5px;
+  text-transform: uppercase;
+  border: none;
+  transform: scale(1);
+  margin-bottom: 1rem;
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 250ms;
+  }
+}
 .createMenu {
   margin-left: 20px;
   text-align: start;
