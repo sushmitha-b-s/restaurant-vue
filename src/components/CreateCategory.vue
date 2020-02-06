@@ -1,5 +1,5 @@
 <template>
-  <div class="createMenu">
+  <div class="createMenu createCategory-form">
     <button @click="showMenuForm = true">Create Menu</button>
 
     <form @submit.prevent="createCategory" v-if="showMenuForm">
@@ -70,7 +70,51 @@ export default {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+.createCategory-form {
+  form {
+    max-width: 400px;
+    margin: 1rem auto 3rem;
+    padding: 2rem;
+    background: rgb(207, 202, 202);
+    border-radius: 10px;
+
+    p {
+      font-size: 1.25rem;
+      margin-bottom: 0.5rem;
+      input {
+        width: 100%;
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+        font-size: 1.25rem;
+      }
+      select {
+        width: 70%;
+        margin-bottom: 1rem;
+        padding: 0.5rem;
+        font-size: 1.25rem;
+      }
+    }
+  }
+}
+button {
+  margin-top: 1rem;
+  padding: 0.75rem 0.7rem;
+  font-size: 1.15rem;
+  background: #6f4e37;
+  color: #fff;
+  border-radius: 5px;
+  text-transform: uppercase;
+  border: none;
+  transform: scale(1);
+  margin-bottom: 1rem;
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: transform 250ms;
+  }
+}
 .createMenu {
   margin-left: 20px;
   text-align: start;

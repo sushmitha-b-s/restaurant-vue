@@ -6,10 +6,6 @@
           <router-link :to="{ name: 'categories' }" class="li-link"
             >Menu</router-link
           >
-
-          <router-link :to="{ name: 'categories' }" class="li-link"
-            >Menu</router-link
-          >
         </li>
       </ul>
     </nav>

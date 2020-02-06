@@ -35,4 +35,11 @@ nav {
     }
   }
 }
+
+h1 {
+  margin: 1rem;
+  color: #6f4e37;
+  font-size: 3rem;
+  font-style: italic;
+}
 </style>
