@@ -9,7 +9,7 @@
       <button @click="addToCart(product)">Add to cart</button>
     </div>
 
-    <CreateProduct />
+    <CreateProduct :category_id="this.$route.params.id" />
   </div>
 </template>
 

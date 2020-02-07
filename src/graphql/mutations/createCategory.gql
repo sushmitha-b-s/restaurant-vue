@@ -7,7 +7,5 @@ mutation(
   createCategory(id: $id, name: $name, supplier: $supplier, Timings: $Timings){
     id
     name
-    supplier
-    Timings
   }
 }

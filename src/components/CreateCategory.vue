@@ -45,14 +45,14 @@ export default {
       times.push(`${i}: 00`)
     }
     return {
-      menu: this.createMenu(),
+      menu: this.newCategory(),
       times,
       showMenuForm: false
     }
   },
   methods: {
     ...mapActions(['addCategory']),
-    createMenu() {
+    newCategory() {
       return {
         id: '',
         name: '',
@@ -62,7 +62,7 @@ export default {
     },
     createCategory() {
       this.addCategory(this.menu).then(() => {
-        this.menu = this.createMenu()
+        this.menu = this.newCategory()
         this.showMenuForm = false
       })
     }
