@@ -1,5 +1,6 @@
 import { graphqlQueries } from '../../graphql/index'
 import { apolloClient } from '../../apollo'
+import { graphqlMutations } from '../../graphql/index'
 
 export const state = {
   products: []
@@ -8,6 +9,9 @@ export const state = {
 export const mutations = {
   FETCH_PRODUCTS(state, products) {
     state.products = products
+  },
+  ADD_PRODUCT(state, product) {
+    state.products = [...state.products, product]
   }
 }
 
@@ -21,5 +25,19 @@ export const actions = {
     })
 
     commit('FETCH_PRODUCTS', response.data.Category.Products)
+  },
+  async addProduct({ commit }, product) {
+    const response = await apolloClient.mutate({
+      mutation: graphqlMutations.createProduct,
+      variables: {
+        id: product.id,
+        productName: product.productName,
+        productPrice: product.productPrice,
+        Ingredients: product.Ingredients,
+        category_id: product.category_id
+      }
+    })
+
+    commit('ADD_PRODUCT', response.data.createProduct)
   }
 }
